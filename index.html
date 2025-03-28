@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JWT Auth Example</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1, h2 {
+      color: #000;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    
+    div {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    input {
+      display: block;
+      width: 90%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+    
+    button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #000;
+    }
+    
+    #registerMessage, #loginMessage, #protectedData {
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<h1>JWT Authentication Example</h1>
+<div>
+  <h2>Register</h2>
+  <form id="registerForm">
+    <input type="text" id="registerUsername" placeholder="Username"
+           required>
+    <input type="password" id="registerPassword"
+           placeholder="Password" required>
+    <button type="submit">Register</button>
+  </form>
+  <p id="registerMessage"></p>
+</div>
+<div>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="text" id="loginUsername" placeholder="Username"
+           required>
+    <input type="password" id="loginPassword" placeholder="Password"
+           required>
+    <button type="submit">Login</button>
+  </form>
+  <p id="loginMessage"></p>
+</div>
+<div>
+  <h2>Protected Data</h2>
+  <button id="fetchProtectedData">Fetch Protected Data</button>
+  <p id="protectedData"></p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
